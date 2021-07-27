@@ -3,6 +3,7 @@ const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'hyfuser',
   password : 'hyfpassword',
+  multipleStatements: true,
 });
 
 // template function to query database
@@ -23,8 +24,8 @@ connection.connect((err) => {
     console.log('Connection established')
   });
 
-  // creating database
-const create_db = "CREATE DATABASE IF NOT EXISTS meetup"
+  // creating database  
+const create_db = "DROP DATABASE IF EXISTS meetup; CREATE DATABASE IF NOT EXISTS meetup"
   db_query(create_db);
   db_query("USE meetup");
 
@@ -44,7 +45,7 @@ const create_meeting = "CREATE TABLE IF NOT EXISTS Meeting (meeting_no int PRIMA
   db_query(invitees_data);
 
   const rooms_data =
-  "INSERT INTO room VALUES (1, 'Reception', 1),(2, 'Waiting', 1),(3, 'Meeting', 2),(4, 'Conference', 2),(5, 'Spare', 3)";
+  "INSERT INTO room VALUES (1, 'Reception', 1),(2, 'Waiting', 1),(3, 'Meeting', 2),(4, 'Conference', 2),(5, 'kitchen', 3);"
   db_query(rooms_data);
 
   const meetings_data =
