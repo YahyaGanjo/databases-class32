@@ -1,5 +1,5 @@
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
+const mysql      = require('mysql');
+const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'hyfuser',
   password : 'hyfpassword',
@@ -13,6 +13,7 @@ const db_query = (query_arg) => {
         }
     }) 
 }
+
 // connecting to database
 connection.connect((err) => {
     if(err){
