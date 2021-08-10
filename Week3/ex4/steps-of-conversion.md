@@ -1,0 +1,10 @@
+- EXPORT TABLES :
+  - SHOW VARIABLES LIKE "secure_file_priv"; this will show the path where our tables can be locally stored
+  - add the path just before the files names(country, city, countrylanguage) in the exporting queries
+- SET ATLAS :
+  - Create a new cluster
+  - Add a new user and ip address to the project
+- CONNECT AND USE COMPASS:
+  - connect the new cluster to compass using the giving string on Atlas
+  - create new collection and three documents corresponding to our files
+  - import each csv file to its document

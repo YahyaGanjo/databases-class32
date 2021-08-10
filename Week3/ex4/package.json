@@ -1,15 +1,14 @@
 {
-  "name": "week3",
+  "name": "ex4",
   "version": "1.0.0",
-  "description": "These are the topics for week 3:",
-  "main": "async-transaction.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yahya Ganjo",
   "license": "ISC",
   "dependencies": {
-    "mysql": "^2.18.1",
-    "util": "^0.12.4"
+    "mongodb": "^4.1.0"
   }
 }
