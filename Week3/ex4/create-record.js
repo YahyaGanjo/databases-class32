@@ -12,10 +12,8 @@ const client = new MongoClient(url);
          console.log("Connected correctly to server");
          const db = client.db(dbName);
 
-         // Use the collection "people"
          const col = db.collection("city");
 
-         // Construct a document                                                                                                                                                              
          const myCity = {
              no: 4081,
              name: "my city",                                                                                                                              
@@ -24,8 +22,7 @@ const client = new MongoClient(url);
              population: 4000000
          }
 
-         // Insert a single document, wait for promise so we can read it back
-         const p = await col.insertOne(myCity);
+         await col.insertOne(myCity);
 
         } catch (err) {
          console.log(err.stack);

@@ -9,7 +9,7 @@ async function run(client, nameOfCity) {
     try {
         await client.connect();
         console.log("Connected correctly to server");
-        const result = await client.db(dbName).collection(clName).deleteOne({ Name: nameOfCity });
+        const result = await client.db(dbName).collection(clName).deleteOne({ name: nameOfCity });
   if (result) {
     console.log(
       `Deleted a city in the collection with the name '${nameOfCity}':`
